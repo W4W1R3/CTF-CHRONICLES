@@ -1,2 +1,3 @@
 # CTFS
-/BLOG_Capture-the-Flag.png
+![Screenshot](BLOG_Capture-the-Flag.png)
+WHAT IS A CTF?
