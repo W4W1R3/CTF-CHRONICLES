@@ -1,0 +1,135 @@
+Matryoshka doll
+
+┌──(billie㉿billie)-[~/…/CTFS/PICOCTFs/Forensics/Matryoshka doll]
+└─$ binwalk -e dolls.jpg
+
+DECIMAL       HEXADECIMAL     DESCRIPTION
+--------------------------------------------------------------------------------
+0             0x0             PNG image, 594 x 1104, 8-bit/color RGBA, non-interlaced
+3226          0xC9A           TIFF image data, big-endian, offset of first image directory: 8
+272492        0x4286C         Zip archive data, at least v2.0 to extract, compressed size: 378942, uncompressed size: 383937, name: base_images/2_c.jpg
+651600        0x9F150         End of Zip archive, footer length: 22
+
+                                                                                                                                                                                                                                                                            
+┌──(billie㉿billie)-[~/…/CTFS/PICOCTFs/Forensics/Matryoshka doll]
+└─$ ls -l
+total 640
+-rw-r--r-- 1 billie billie 651622 Mar  2 14:06 dolls.jpg
+drwxr-xr-x 1 billie billie     40 Mar  2 14:07 _dolls.jpg.extracted
+                                                                                                                                                                                                                                                                            
+┌──(billie㉿billie)-[~/…/CTFS/PICOCTFs/Forensics/Matryoshka doll]
+└─$ cd _dolls.jpg.extracted/
+                                                                                                                                                                                                                                                                            
+┌──(billie㉿billie)-[~/…/PICOCTFs/Forensics/Matryoshka doll/_dolls.jpg.extracted]
+└─$ ls -l
+total 372
+-rw-r--r-- 1 billie billie 379130 Mar  2 14:07 4286C.zip
+drwxr-xr-x 1 billie billie     14 Mar  2 14:07 base_images
+                                                                                                                                                                                                                                                                            
+┌──(billie㉿billie)-[~/…/PICOCTFs/Forensics/Matryoshka doll/_dolls.jpg.extracted]
+└─$ cd base_images 
+                                                                                                                                                                                                                                                                            
+┌──(billie㉿billie)-[~/…/Forensics/Matryoshka doll/_dolls.jpg.extracted/base_images]
+└─$ ls   
+2_c.jpg
+                                                                                                                                                                                                                                                                            
+┌──(billie㉿billie)-[~/…/Forensics/Matryoshka doll/_dolls.jpg.extracted/base_images]
+└─$ binwalk -e 2_c.jpg      
+
+DECIMAL       HEXADECIMAL     DESCRIPTION
+--------------------------------------------------------------------------------
+0             0x0             PNG image, 526 x 1106, 8-bit/color RGBA, non-interlaced
+3226          0xC9A           TIFF image data, big-endian, offset of first image directory: 8
+187707        0x2DD3B         Zip archive data, at least v2.0 to extract, compressed size: 196042, uncompressed size: 201444, name: base_images/3_c.jpg
+383804        0x5DB3C         End of Zip archive, footer length: 22
+383915        0x5DBAB         End of Zip archive, footer length: 22
+
+                                                                                                                                                                                                                                                                            
+┌──(billie㉿billie)-[~/…/Forensics/Matryoshka doll/_dolls.jpg.extracted/base_images]
+└─$ ls
+2_c.jpg  _2_c.jpg.extracted
+                                                                                                                                                                                                                                                                            
+┌──(billie㉿billie)-[~/…/Forensics/Matryoshka doll/_dolls.jpg.extracted/base_images]
+└─$ cd _2_c.jpg.extracted 
+                                                                                                                                                                                                                                                                            
+┌──(billie㉿billie)-[~/…/Matryoshka doll/_dolls.jpg.extracted/base_images/_2_c.jpg.extracted]
+└─$ ls -l
+total 192
+-rw-r--r-- 1 billie billie 196230 Mar  2 14:08 2DD3B.zip
+drwxr-xr-x 1 billie billie     14 Mar  2 14:08 base_images
+                                                                                                                                                                                                                                                                            
+┌──(billie㉿billie)-[~/…/Matryoshka doll/_dolls.jpg.extracted/base_images/_2_c.jpg.extracted]
+└─$ cd base_images       
+                                                                                                                                                                                                                                                                            
+┌──(billie㉿billie)-[~/…/_dolls.jpg.extracted/base_images/_2_c.jpg.extracted/base_images]
+└─$ ls -l
+total 200
+-rw-r--r-- 1 billie billie 201444 Mar 16  2021 3_c.jpg
+                                                                                                                                                                                                                                                                            
+┌──(billie㉿billie)-[~/…/_dolls.jpg.extracted/base_images/_2_c.jpg.extracted/base_images]
+└─$ binwalk -e 3_c.jpg         
+
+DECIMAL       HEXADECIMAL     DESCRIPTION
+--------------------------------------------------------------------------------
+0             0x0             PNG image, 428 x 1104, 8-bit/color RGBA, non-interlaced
+3226          0xC9A           TIFF image data, big-endian, offset of first image directory: 8
+123606        0x1E2D6         Zip archive data, at least v2.0 to extract, compressed size: 77650, uncompressed size: 79806, name: base_images/4_c.jpg
+201422        0x312CE         End of Zip archive, footer length: 22
+
+                                                                                                                                                                                                                                                                            
+┌──(billie㉿billie)-[~/…/_dolls.jpg.extracted/base_images/_2_c.jpg.extracted/base_images]
+└─$ ls ~ 
+ Android   bin   CYB3RS3C   Desktop   Documents   Downloads   Dp.png   linux-firmware   Music   Pictures   Public   snap   Templates   Videos  'VirtualBox VMs'   WALLPAPERS
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
+┌──(billie㉿billie)-[~/…/_dolls.jpg.extracted/base_images/_2_c.jpg.extracted/base_images]
+└─$ ls   
+3_c.jpg  _3_c.jpg.extracted
+                                                                                                                                                                                                                                                                            
+┌──(billie㉿billie)-[~/…/_dolls.jpg.extracted/base_images/_2_c.jpg.extracted/base_images]
+└─$ cd _3_c.jpg.extracted 
+                                                                                                                                                                                                                                                                            
+┌──(billie㉿billie)-[~/…/base_images/_2_c.jpg.extracted/base_images/_3_c.jpg.extracted]
+└─$ ls -l
+total 80
+-rw-r--r-- 1 billie billie 77838 Mar  2 14:09 1E2D6.zip
+drwxr-xr-x 1 billie billie    14 Mar  2 14:09 base_images
+                                                                                                                                                                                                                                                                            
+┌──(billie㉿billie)-[~/…/base_images/_2_c.jpg.extracted/base_images/_3_c.jpg.extracted]
+└─$ cd base_images       
+                                                                                                                                                                                                                                                                            
+┌──(billie㉿billie)-[~/…/_2_c.jpg.extracted/base_images/_3_c.jpg.extracted/base_images]
+└─$ ls -l
+total 80
+-rw-r--r-- 1 billie billie 79806 Mar 16  2021 4_c.jpg
+                                                                                                                                                                                                                                                                            
+┌──(billie㉿billie)-[~/…/_2_c.jpg.extracted/base_images/_3_c.jpg.extracted/base_images]
+└─$ binwalk -e 4_c.jpg 
+
+DECIMAL       HEXADECIMAL     DESCRIPTION
+--------------------------------------------------------------------------------
+0             0x0             PNG image, 320 x 768, 8-bit/color RGBA, non-interlaced
+3226          0xC9A           TIFF image data, big-endian, offset of first image directory: 8
+79578         0x136DA         Zip archive data, at least v2.0 to extract, compressed size: 62, uncompressed size: 81, name: flag.txt
+79784         0x137A8         End of Zip archive, footer length: 22
+
+                                                                                                                                                                                                                                                                            
+┌──(billie㉿billie)-[~/…/_2_c.jpg.extracted/base_images/_3_c.jpg.extracted/base_images]
+└─$ ls -l 
+total 80
+-rw-r--r-- 1 billie billie 79806 Mar 16  2021 4_c.jpg
+drwxr-xr-x 1 billie billie    34 Mar  2 14:11 _4_c.jpg.extracted
+                                                                                                                                                                                                                                                                            
+┌──(billie㉿billie)-[~/…/_2_c.jpg.extracted/base_images/_3_c.jpg.extracted/base_images]
+└─$ cd _4_c.jpg.extracted 
+                                                                                                                                                                                                                                                                            
+┌──(billie㉿billie)-[~/…/base_images/_3_c.jpg.extracted/base_images/_4_c.jpg.extracted]
+└─$ ls -l
+total 8
+-rw-r--r-- 1 billie billie 228 Mar  2 14:11 136DA.zip
+-rw-r--r-- 1 billie billie  81 Mar 16  2021 flag.txt
+                                                                                                                                                                                                                                                                            
+┌──(billie㉿billie)-[~/…/base_images/_3_c.jpg.extracted/base_images/_4_c.jpg.extracted]
+└─$ cat flag.txt 
+picoCTF{4cf7ac000c3fb0fa96fb92722ffb2a32}                                                                                                                                                                                                                                                                            
+┌──(billie㉿billie)-[~/…/base_images/_3_c.jpg.extracted/base_images/_4_c.jpg.extracted]
+└─$ 
