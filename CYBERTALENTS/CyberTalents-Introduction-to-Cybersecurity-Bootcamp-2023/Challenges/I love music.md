@@ -10,3 +10,8 @@ Using Sonic visualizer
 
 
 https://github.com/W4W1R3/TOOLS/tree/main/SONIC%20VISUALIZER
+
+
+# Flag
+
+`flag you_are_victorious`
