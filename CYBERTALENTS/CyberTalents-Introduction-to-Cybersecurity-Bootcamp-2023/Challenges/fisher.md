@@ -8,3 +8,4 @@ Flag format: flag{xxx xxxxxx xxxxxx}
 
 # Solution
 
+`He/She is a  Bug Bounty Hunter`
