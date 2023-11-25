@@ -12,6 +12,8 @@ There is an  exec.zip hashed file. Now to 'CRACK' it.
 
 `
 ╭─ ~/Rootank/C/C/Linuxcmd 101 /linux-chal/cat ························································································································· ✔ │ 09:15:56 ─╮
+
+
 ╰─ zip2john exec.zip > hash.txt                                                                                                                                                                                           ─╯
 ver 2.0 exec.zip/exec/ is not encrypted, or stored with non-handled compression type
 `
