@@ -105,4 +105,16 @@ Stopped: Sat Nov 25 15:05:58 2023
 ```
 # Flag
 
-`born1992`
+```
+╭─ ~/Rootank/CYBERTALENTS/CyberTalents-Introduction-to-Cybersecurity-Bootcamp-2023 ······················································································································ ✔ │ 15:23:08 ─╮
+╰─ hashcat -m 22000 hashwifi.txt -a 0 /usr/share/wordlists/rockyou.txt      --show                                                                                                                                         ─╯
+
+cc303dcc8fb0b285257353480a52c563:000d93ebb08c:00095b91535d:test:biscotte
+```
+
+``
+
+biscotte
+
+
+``
