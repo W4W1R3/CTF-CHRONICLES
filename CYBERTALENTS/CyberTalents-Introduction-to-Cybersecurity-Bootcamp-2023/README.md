@@ -38,9 +38,9 @@ Hello
 
 Feel free to connect with me on social media or follow my GitHub profile for updates on my learning journey.
 
-- Twitter: [@bloman19](https://twitter.com/W4W1R3)
-- LinkedIn: [Abdoulaye Diallo](https://www.linkedin.com/in/w4w1r3/)
-- GitHub: [nenandjabhata](https://github.com/W4W1R3)
+- Twitter: [@W4W1R3](https://twitter.com/W4W1R3)
+- LinkedIn: [Wawire Bilgah](https://www.linkedin.com/in/w4w1r3/)
+- GitHub: [W4W1R3](https://github.com/W4W1R3)
 
 I can't wait to explore these courses, take on challenges, and grow together in becoming skilled defenders of the digital world! Let's go! 🚀💻🔒
 
