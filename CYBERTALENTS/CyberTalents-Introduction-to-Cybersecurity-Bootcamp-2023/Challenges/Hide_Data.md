@@ -20,3 +20,7 @@ ebg
 ╰─ echo $rot | rot13                                                                                                                                                                                                       ─╯
 the flag is 2j68yfhqlz It is pretty easy to see the flag but can you see it i took nearly 1 minute to encode this with ROT13 good luck in solving that
 ```
+
+# Flag
+
+`2j68yfhqlz`
