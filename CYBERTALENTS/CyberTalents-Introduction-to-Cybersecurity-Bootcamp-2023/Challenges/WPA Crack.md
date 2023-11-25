@@ -11,29 +11,62 @@ Flag format is just the password
 
 first we have a pcap file.
 ```
-└─# file wpa943050264305852656243865.cap 
+╭─ ~/Rootank/CYBERTALENTS/CyberTalents-Introduction-to-Cybersecurity-Bootcamp-2023 ································································ ✔ │ 14:58:32 ─╮
+╰─ file wpa943050264305852656243865.cap                                                                                                                                                                                   ─╯
 wpa943050264305852656243865.cap: pcap capture file, microsecond ts (little-endian) - version 2.4 (802.11 with Prism header, capture length 65535)
+
 
 ```
 **Cracking it using Hashcat**
 First we will Transform it into a Crackable file
 ```
-└─# hcxpcapngtool -o hashwifi.txt -E essidlist wpa943050264305852656243865.cap 
+╭─ ~/Rootank/CYBERTALENTS/CyberTalents-Introduction-to-Cybersecurity-Bootcamp-2023 ··················································································· 127 ✘ │ 15:00:07 ─╮
+╰─  hcxpcapngtool -o hashwifi.txt -E essidlist wpa943050264305852656243865.cap                                                                                                                                            ─╯
+
 hcxpcapngtool 6.2.7 reading from wpa943050264305852656243865.cap...
 
+summary capture file
+--------------------
+file name................................: wpa943050264305852656243865.cap
+version (pcap/cap).......................: 2.4 (very basic format without any additional information)
+timestamp minimum (GMT)..................: 10.05.2005 13:01:06
+timestamp maximum (GMT)..................: 10.05.2005 13:01:06
+used capture interfaces..................: 1
+link layer header type...................: DLT_PRISM_HEADER (119)
+endianness (capture system)...............: little endian
+packets inside...........................: 13
+frames with correct FCS..................: 13
+ESSID (total unique).....................: 1
+BEACON (total)...........................: 1
+BEACON on 2.4 GHz channel (from IE_TAG)..: 7 
+WPA encrypted............................: 2
+EAPOL messages (total)...................: 4
+EAPOL WPA messages.......................: 4
+EAPOLTIME gap (measured maximum usec)....: 6788
+EAPOL ANONCE error corrections (NC)......: not detected
+EAPOL M1 messages (total)................: 1
+EAPOL M2 messages (total)................: 1
+EAPOL M3 messages (total)................: 1
+EAPOL M4 messages (total)................: 1
+EAPOL pairs (total)......................: 4
+EAPOL pairs (best).......................: 1
+EAPOL pairs written to 22000 hash file...: 1 (RC checked)
+EAPOL M34E4 (authorized).................: 1
 
-┌──(root㉿1337)-[/home/bloman/Learning/CyberTalents-Introduction-to-Cybersecurity-Bootcamp-2023/Files]
-└─# cat essidlist 
+frequency statistics from radiotap header (frequency: received packets)
+
+
+╭─ ~/Rootank/CYBERTALENTS/CyberTalents-Introduction-to-Cybersecurity-Bootcamp-2023 ······································ ✔ │ 15:02:18 ─╮
+╰─ cat essidlist                                                                                                                                                                                                           ─╯
 test
-                                                                                                                                     
-┌──(root㉿1337)-[/home/bloman/Learning/CyberTalents-Introduction-to-Cybersecurity-Bootcamp-2023/Files]
-└─# cat hashwifi.txt 
-WPA*02*cc303dcc8fb0b285257353480a52c563*000d93ebb08c*00095b91535d*74657374*54adc644966dc8423d44364a1de9ec22415522bd0555ee718f8a53b8d679470c*0103005ffe010900200000000000000001fe5f0c5b5423815f35fe606720bbb9466d8601a8b4493af4cf5a0317f38c83870000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000*05
+
 ```
 
 **Cracked**
 ```
-└─# hashcat -m 22000 hashwifi.txt -a 0 /usr/share/wordlists/rockyou.txt       
+╭─ ~/Rootank/CYBERTALENTS/CyberTalents-Introduction-to-Cybersecurity-Bootcamp-2023 ··········································· ✔ │ 15:02:18 ─╮
+
+└─ hashcat -m 22000 hashwifi.txt -a 0 /usr/share/wordlists/rockyou.txt       
 hashcat (v6.2.6) starting
 
 OpenCL API (OpenCL 3.0 PoCL 3.0+debian  Linux, None+Asserts, RELOC, LLVM 13.0.1, SLEEF, DISTRO, POCL_DEBUG) - Platform #1 [The pocl project]
