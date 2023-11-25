@@ -21,4 +21,10 @@ Analyzing '06f8aa28b9237866e3e289f18ade19e1736d809d'
 [+] Skein-512(160) 
 ```
 
+https://hashes.com/en/decrypt/hash
+
 ![Hashes.com](https://github.com/W4W1R3/CTF-CHRONICLES/raw/main/CYBERTALENTS/CyberTalents-Introduction-to-Cybersecurity-Bootcamp-2023/Challenges/1.png)
+
+# Flag
+
+`jrahyn+`
