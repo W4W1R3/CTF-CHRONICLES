@@ -82,22 +82,27 @@ Session..........: hashcat
 Status...........: Cracked
 Hash.Mode........: 22000 (WPA-PBKDF2-PMKID+EAPOL)
 Hash.Target......: hashwifi.txt
-Time.Started.....: Sun Nov 19 17:55:10 2023 (29 secs)
-Time.Estimated...: Sun Nov 19 17:55:39 2023 (0 secs)
+Time.Started.....: Sat Nov 25 15:05:32 2023 (25 secs)
+Time.Estimated...: Sat Nov 25 15:05:57 2023 (0 secs)
 Kernel.Feature...: Pure Kernel
 Guess.Base.......: File (/usr/share/wordlists/rockyou.txt)
 Guess.Queue......: 1/1 (100.00%)
-Speed.#1.........:     2022 H/s (7.38ms) @ Accel:64 Loops:256 Thr:1 Vec:8
+Speed.#1.........:     2362 H/s (6.41ms) @ Accel:32 Loops:512 Thr:1 Vec:8
 Recovered........: 1/1 (100.00%) Digests (total), 1/1 (100.00%) Digests (new)
 Progress.........: 151377/14344385 (1.06%)
 Rejected.........: 93777/151377 (61.95%)
-Restore.Point....: 150811/14344385 (1.05%)
+Restore.Point....: 151064/14344385 (1.05%)
 Restore.Sub.#1...: Salt:0 Amplifier:0-1 Iteration:0-1
 Candidate.Engine.: Device Generator
-Candidates.#1....: carpediem1 -> bangonthedoor
-Hardware.Mon.#1..: Temp: 87c Util: 96%
+Candidates.#1....: born1992 -> bangonthedoor
+Hardware.Mon.#1..: Temp: 71c Util: 94%
 
-Started: Sun Nov 19 17:55:01 2023
-Stopped: Sun Nov 19 17:55:41 2023
+Started: Sat Nov 25 15:04:41 2023
+Stopped: Sat Nov 25 15:05:58 2023
+
+
 
 ```
+# Flag
+
+`born1992`
